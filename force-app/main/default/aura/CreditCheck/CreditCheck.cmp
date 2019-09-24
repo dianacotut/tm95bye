@@ -1,0 +1,18 @@
+<aura:component controller="CreditCheckController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="isOpenPopup" type="Boolean" default="true" />
+        <lightning:recordEditForm aura:id="caseform" objectApiName="Case">
+            <lightning:messages />
+                <div class="slds-grid">
+                        <div class="slds-col slds-size_1-of-3">
+                                <lightning:inputField fieldName="AccountId" aura:id="accountName" />
+                        </div>
+                    <div class="slds-col slds-size_1-of-3">
+                        <lightning:inputField fieldName="Status"/>
+                    </div>
+                    <div class="slds-col slds-size_1-of-3">
+                        <lightning:inputField fieldName="Credit_Check_Status__c" aura:id="creditCheckStatus"/>
+                    </div>
+                </div>
+                <lightning:button class="slds-m-top_small" variant="brand" label="Save" type="submit" />
+        </lightning:recordEditForm>               
+</aura:component>	
